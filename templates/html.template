@@ -10,6 +10,11 @@
 
 <body>
     <h1>Package JSON</h1>
+    <h2>Scripts</h2>
+    {% for script in packageJson.scripts %}
+        <strong>npm run {{ script.name }} </strong>
+        <span>{{ script.exec }}</span>
+    {% endfor %}
     <h2>
         Dependencies
     </h2>

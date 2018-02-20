@@ -9,7 +9,9 @@ function convert2Template(packageJson, template, useBrackets) {
         };
     }
     nunjucks.configure({ autoescape: true, tags });
-    return nunjucks.renderString(template, { packageJson });
+    console.log(JSON.stringify({ packageJson }));
+    // return nunjucks.renderString(template, { packageJson });
+    return '';
 }
 
 

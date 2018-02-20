@@ -12,7 +12,7 @@ package-json-to-template -p ./package.json > index.html
 package-json-to-template -p ./package.json -t default/latex.template --usebrackets > backlog.tex
 ```
 
-See output in [example-output.tex](https://github.com/BrunnerLivio/package-json-to-template/blob/master/example-output.tex)
+See output in [example.tex](https://github.com/BrunnerLivio/package-json-to-template/blob/master/output/example.tex)
 
 ## Custom
 

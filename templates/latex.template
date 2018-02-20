@@ -1,0 +1,36 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[latin1]{inputenc}
+\RequirePackage{tabularx}
+
+\begin{document}
+\section*{(( packageJson.name )) (( packageJson.version )) by (( packageJson.author )) }
+
+(( packageJson.description ))
+
+\subsection*{Dependencies}
+
+\begin{tabularx}{\textwidth}{p{0.25\textwidth} p{0.75\textwidth}}
+    {\it Name} & {\it Description}\\
+    \hline
+    {% for dependency in packageJson.dependencies %}
+    (( dependency.name )) & (( dependency.description ))\\
+    {% endfor %} 
+\end{tabularx}
+
+\subsection*{DevDependencies}
+
+\begin{tabularx}{\textwidth}{p{0.25\textwidth} p{0.75\textwidth}}
+    {\it Name} & {\it Description}\\
+    \hline
+    {% for dependency in packageJson.devDependencies %}
+    (( dependency.name )) & (( dependency.description ))\\
+    {% endfor %} 
+\end{tabularx}
+
+
+\newpage
+
+\end{document}

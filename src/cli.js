@@ -10,6 +10,7 @@ function main() {
         .version(packageJson.version)
         .option('-p --packageJson <packageJson>', 'The path to the package.json file')
         .option('-t --template <template>', 'the template path')
+        .option('--tojson', 'If the output should print the JSON object. Ignores --template parameter')
         .option('--usebrackets', 'If the given jinja template uses double brackets for variables, instead of double curly braces')
         .parse(process.argv);
 
@@ -17,7 +18,8 @@ function main() {
     PackageJsonToTemplate({
         templatePath: program.template,
         useBrackets: program.usebrackets,
-        packageJsonPath: program.packageJson
+        packageJsonPath: program.packageJson,
+        toJson: program.tojson
     })
         .then(data => console.log(data))
         .catch(err => console.error(err));

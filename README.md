@@ -16,7 +16,7 @@ Parses package.json data and prints it in the given template (HTML, LaTeX, etc.)
 
 ```bash
 npm i -g package-json-to-template
-package-json-to-template [-t default/latex.template] [--usebrackets]
+package-json-to-template [-t default/latex.template] [--usebrackets] [--tojson]
 ```
 
 ### NodeJS
@@ -26,11 +26,13 @@ const PackageJsonToTemplate = require('package-json-to-template');
 
 const data = await PackageJsonToTemplate({
     template: `
-{% for backlog in backlogs %}
-((backlog.name))
+{% for dependency in packageJson.dependencies %}
+((dependency.name))
 {% endfor %}
     `,
-    useBrackets: true
+    packageJsonPath: './package.json',
+    useBrackets: true,
+    toJson: false
 });
 ```
 

@@ -12,7 +12,14 @@ function PackageJsonToTemplate(options) {
     options = resolveOptions(options);
     return resolveDependencies(options.packageJson)
         .then(packageJson => resolveScripts(packageJson))
-        .then(packageJson => convert2Template(packageJson, options.template, options.useBrackets));
+        .then(packageJson => {
+            if (options.toJson === true) {
+                return JSON.stringify(packageJson);
+            } else {
+                return convert2Template(packageJson, options.template, options.useBrackets);
+
+            }
+        });
 }
 
 module.exports = PackageJsonToTemplate;

@@ -22,3 +22,11 @@ See output in [example.tex](https://github.com/BrunnerLivio/package-json-to-temp
 ```bash
 package-json-to-template -p ./package.json -t ./my-template.template > output
 ```
+
+## Debugging
+
+Prints the object, which will be given to the template, as JSON.
+
+```bash
+package-json-to-tempalte -p ./package.json --tojson
+```

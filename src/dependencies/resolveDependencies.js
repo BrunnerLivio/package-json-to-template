@@ -17,7 +17,13 @@ function resolveDependencies(packageJson) {
 
     return Promise.all(promises)
         .then(dependencies => {
-            dependencies = dependencies.map(dependency => resolveUsers(dependency));
+            dependencies = dependencies
+                .map(dependency => resolveUsers(dependency))
+                .map(dependency => dependency.map(d => {
+                    d['dist-tags'] = undefined;
+                    d.time = undefined;
+                    return d;
+                }));
             packageJson.dependencies = dependencies[0];
             packageJson.devDependencies = dependencies[1];
             return packageJson;

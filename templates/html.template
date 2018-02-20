@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PackageJSON</title>
+</head>
+
+<body>
+    <h1>Package JSON</h1>
+    <h2>
+        Dependencies
+    </h2>
+    {% for dependency in packageJson.dependencies %}
+    <div>
+        <h3>
+            {{ dependency.name }} {{ dependency.version }}
+        </h3>
+        <p>
+            {{ dependency.description }}
+        </p>
+    </div>
+    {% endfor %}
+    <h2>
+        DevDependencies
+    </h2>
+    {% for dependency in packageJson.devDependencies %}
+    <div>
+        <h3>
+            {{ dependency.name }} {{ dependency.version }}
+        </h3>
+        <p>
+            {{ dependency.description }}
+        </p>
+    </div>
+    {% endfor %}
+</body>
+
+</html>

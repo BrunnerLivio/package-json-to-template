@@ -1,0 +1,37 @@
+{
+  "name": "package-json-to-template",
+  "version": "1.0.0",
+  "description": "Parses the package.json (dev-)dependency data and prints it in the given template",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "bin": {
+    "package-json-to-template": "src/cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrunnerLivio/package-json-to-template.git"
+  },
+  "keywords": [
+    "latex",
+    "html",
+    "jinja",
+    "npm"
+  ],
+  "author": "Livio Brunner",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BrunnerLivio/package-json-to-template/issues"
+  },
+  "homepage": "https://github.com/BrunnerLivio/package-json-to-template#readme",
+  "dependencies": {
+    "api-npm": "^1.0.0",
+    "commander": "^2.14.0",
+    "nunjucks": "^3.0.1",
+    "promise-pipeline": "^1.0.1"
+  },
+  "devDependencies": {
+    "mocha": "5.0.1"
+  }
+}

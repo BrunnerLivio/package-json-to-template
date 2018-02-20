@@ -1,12 +1,13 @@
 # package-json-to-template
 
-Parses the package.json (dev-)dependency data and prints it in the given template
+Parses package.json data and prints it in the given template (HTML, LaTeX, etc.)
 
 ## Use Case
 
 - Websites
-- LaTeX Templates
+- LaTeX
 - Documentations
+- Continous Integration
 - etc.
 
 ## Usage
@@ -14,6 +15,7 @@ Parses the package.json (dev-)dependency data and prints it in the given templat
 ### CLI
 
 ```bash
+npm i -g package-json-to-template
 package-json-to-template [-t default/latex.template] [--usebrackets]
 ```
 

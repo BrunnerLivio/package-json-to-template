@@ -1,7 +1,7 @@
 {
   "name": "package-json-to-template",
-  "version": "1.0.0",
-  "description": "Parses the package.json (dev-)dependency data and prints it in the given template",
+  "version": "1.0.1",
+  "description": "Parses package.json data and prints it in the given template (HTML, LaTeX, etc.)",
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js"

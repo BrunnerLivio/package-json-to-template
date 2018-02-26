@@ -1,4 +1,5 @@
 # package-json-to-template
+[![Build Status](https://travis-ci.org/BrunnerLivio/package-json-to-template.svg?branch=master)](https://travis-ci.org/BrunnerLivio/package-json-to-template)
 
 Parses package.json data and prints it in the given template (HTML, LaTeX, etc.)
 

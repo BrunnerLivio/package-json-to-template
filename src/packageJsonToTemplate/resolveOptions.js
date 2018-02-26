@@ -15,7 +15,7 @@ const resolveDefaultTemplate = (templatePath) => templatePath.replace('default/'
 /**
  * Resolves the template(-path) options and
  * returns the template.
- * @param {object} options The options of TrelloScrumToTemplate
+ * @param {object} options The options
  * @param {string?} options.templatePath The path of the template
  * @param {string?} options.template The template as string
  * 
@@ -36,6 +36,17 @@ function resolveTemplate(options) {
     return template;
 }
 
+/**
+ * Resolves the packageJson(-Path) options and
+ * returns the packageJson-content.
+ *
+ *
+ * @param {object} options The options
+ * @param {string?} options.packageJsonPath The path to the package JSON file to read from
+ * @param {string?} options.packageJson The packageJson file content
+ *
+ * @returns {object} The parsed package.json content
+ */ 
 function resolvePackageJson(options) {
     let packageJsonPath = options.packageJsonPath;
     let packageJson = options.packageJson;
@@ -52,6 +63,10 @@ function resolvePackageJson(options) {
 }
 
 
+/**
+ * Checks the given options and resolves them,
+ * if necessary
+ */
 function resolveOptions(options) {
     options.template = resolveTemplate(options);
     options.packageJson = resolvePackageJson(options);

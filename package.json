@@ -1,10 +1,11 @@
 {
   "name": "package-json-to-template",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Parses package.json data and prints it in the given template (HTML, LaTeX, etc.)",
   "main": "src/index.js",
   "scripts": {
-    "start": "node src/index.js"
+    "start": "node src/index.js",
+    "test": "mocha"
   },
   "bin": {
     "package-json-to-template": "src/cli.js"

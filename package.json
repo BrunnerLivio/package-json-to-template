@@ -28,6 +28,7 @@
   "dependencies": {
     "api-npm": "^1.0.0",
     "commander": "^2.14.0",
+    "is-object": "^1.0.1",
     "nunjucks": "^3.0.1",
     "promise-pipeline": "^1.0.1"
   },

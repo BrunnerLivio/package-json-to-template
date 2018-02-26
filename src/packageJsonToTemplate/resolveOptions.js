@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const isObject = require('is-object')
 
 const DEFAULT_VALUES = {
     TEMPLATE_PATH: 'default/html.template'
@@ -58,8 +59,12 @@ function resolvePackageJson(options) {
     if (packageJsonPath) {
         packageJson = fs.readFileSync(packageJsonPath, 'utf8');
     }
-
-    return JSON.parse(packageJson);
+    
+    if (isObject(packageJson)) {
+        return packageJson
+    } else {
+        return JSON.parse(packageJson);
+    }
 }
 
 
